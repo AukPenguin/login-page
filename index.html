@@ -18,20 +18,19 @@
                     
                     <div>
                         <label for="user-name">User name</label>
-                        <input id="user-name" type="text">
+                        <input id="user-name clear" type="text" required>
                     </div>
 
                     <div>
                         <label for="email"></label>
-                        <input id="email" type="email">
+                        <input id="email clear" type="email" placeholder="email" required>
                     </div>
 
                     <div>
                         <label for="password"></label>
-                        <input id="password" type="password" >
+                        <input id="password clear" type="password" placeholder="password" minlength="5" pattern="^[a-zA-Z0-9_]*$" required>
                     </div>
-
-                    <button class="submit-button" type="submit" form="login-form">Submit</button>
+                    <button class="submit-button" type="reset">Submit</button>
                 </form>
             
             </div>
