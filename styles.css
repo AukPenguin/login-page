@@ -78,7 +78,7 @@ body {
 
     font-size: var(--font-large);
 
-    border: none;
+    border: 3px solid transparent;
     border-radius: 20px;
 
     &:focus {
@@ -96,36 +96,42 @@ body {
 
 .login-container > .login-form > .submit-button {
     display: block;
+    position: relative;
     margin: 20px auto 60px;
-    padding: 15px 30px;
+    width: 120px;
+    height: 50px;
+    z-index: 0;
 
     font-size: var(--font-large);
     font-weight: var(--font-bold);
 
     color: white;
-    background-image: linear-gradient(to right, #3ab7f1 0%, #0072ff 100%);
+    background: linear-gradient(to right, #3ab7f1 0%, #0072ff 100%);
+    
 
     border: none;
     border-radius: 12px;
     cursor: pointer;
-}
 
+        &:after {
+        display: block;
+        align-content: center;
 
-/* 
-form input:checked + label {
-    text-decoration: line-through;
-    color: #c0c0c0;
-}
+        content: '';
+        width: 0%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: -1;
 
-div:nth-child(even) {
-    width: max-content;
-    background-color: rgba(255, 0, 0, 0.282);
+        background: linear-gradient(to right, yellow, orange 100%);
+        
+        border-radius: inherit;
+        position: absolute;
+        transition: 350ms ease-in-out;
+    }
+
+    &:hover:after {
+        width: 100%;
+    }
 }
-div:nth-child(odd) {
-    width: max-content;
-    background-color: rgba(0, 255, 0, 0.282);
-}
-div:nth-child(4n) {
-    width: max-content;
-    background-color: rgba(0, 0, 255, 0.282);
-} */
