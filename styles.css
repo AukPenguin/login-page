@@ -1,5 +1,5 @@
 :root {
-    --gradient: linear-gradient(rgb(255, 255, 255, 0.2)), linear-gradient(115deg, blue -15%, red 40%, yellow 110%);
+    --gradient: linear-gradient(rgb(255, 255, 255, 0.2)), linear-gradient(115deg, blue -15%, red 40%, yellow 120%);
 
     --font-large: 14pt;
     --font-bold: bold;
@@ -76,9 +76,19 @@ body {
     color: white;
 }
 
-#user-name-label {
-    color: white;
+
+
+    /*  J'ai utilise le :has vu en cours que j'ai associe au placeholder-shown,
+    *   que j'ai trouve sur stackoverlfow pour garder visible le label quand il a un contenu.
+    *   https://stackoverflow.com/questions/16952526/detect-if-an-input-has-text-in-it-using-css-on-a-page-i-am-visiting-and-do-no  */
+
+.login-form > div:has(input:not(:placeholder-shown)) {
+    label {
+        color: white;
+    }
 }
+
+
 
 .login-container .login-form div > input {
     margin: 0 80px 40px;
@@ -118,6 +128,7 @@ body {
     
     border: none;
     border-radius: 12px;
+    overflow: hidden;
     cursor: pointer;
 
 
@@ -135,7 +146,6 @@ body {
 
         background: linear-gradient(to right, yellow, orange 100%);
         
-        border-radius: inherit;
         position: absolute;
         transition: 350ms ease-in-out;
     }
