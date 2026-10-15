@@ -78,8 +78,8 @@ body {
 
 
 
-    /*  J'ai utilise le :has vu en cours que j'ai associe au placeholder-shown,
-    *   que j'ai trouve sur stackoverlfow pour garder visible le label quand il a un contenu.
+    /*  J'ai combiné le :has vu en cours avec le placeholder-shown,
+    *   que j'ai trouvé sur stackoverlfow pour garder visible le label quand il a un contenu.
     *   https://stackoverflow.com/questions/16952526/detect-if-an-input-has-text-in-it-using-css-on-a-page-i-am-visiting-and-do-no  */
 
 .login-form > div:has(input:not(:placeholder-shown)) {
